@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hangman - COMP2132</title>  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="./scripts/script.js" defer></script>
+    <script src="./json/answer.json" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <h1 class="title">COMP2132 - Hangman</h1>
+        </header>
+        <main> 
+            <div class="hangman">
+                <div class="background_div">
+                    <img src="./images/hangman1.jpeg" class="background_img" alt="">
+                </div>
+                <div class="quiz_div">
+                    <p id="answer"></p>
+                    <p id="hint">Hint: <span id="hint_answer"></span></p>
+                    <p class="incorrect">Incorrect guesses: <span class="incorrect_count">0</span>/7</p>
+                    <div class="keyword">
+                        <input class="words" type="button" value="A">
+                        <input class="words" type="button" value="B">
+                        <input class="words" type="button" value="C">
+                        <input class="words" type="button" value="D">
+                        <input class="words" type="button" value="E">
+                        <input class="words" type="button" value="F">
+                        <input class="words" type="button" value="G">
+                        <input class="words" type="button" value="H">
+                        <input class="words" type="button" value="I">
+                        <input class="words" type="button" value="J">
+                        <input class="words" type="button" value="K">
+                        <input class="words" type="button" value="L">
+                        <input class="words" type="button" value="M">
+                        <br>
+                        <input class="words" type="button" value="N">
+                        <input class="words" type="button" value="O">
+                        <input class="words" type="button" value="P">
+                        <input class="words" type="button" value="Q">
+                        <input class="words" type="button" value="R">
+                        <input class="words" type="button" value="S">
+                        <input class="words" type="button" value="T">
+                        <input class="words" type="button" value="U">
+                        <input class="words" type="button" value="V">
+                        <input class="words" type="button" value="W">
+                        <input class="words" type="button" value="X">
+                        <input class="words" type="button" value="Y">
+                        <input class="words" type="button" value="Z">
+                    </div>
+                </div>
+            </div>
+            <div id="win_page">
+                <img style="width:600px; height:700px;" src="./images/win.jpeg" class="minipage_background" alt="">
+                <div class="minipage_message">
+                    <h3 class="minipage_p">You Won</h3>
+                    <h3 class="minipage_p">Word was '<span class="win_answer"></span>'</h3>
+                    <input type="button" class="play_again" value="Play Again" onclick="playAgain()">
+                </div>
+            </div>
+            <div id="lose_page">
+                <img style="width:600px; height:700px;" src="./images/lose.jpeg" class="minipage_background" alt="">
+                <div class="minipage_message">
+                    <h3 class="minipage_p">You Lose</h3>
+                    <h3 class="minipage_p">Word was '<span class="lose_answer"></span>'</h3>
+                    <input type="button" class="play_again" value="Play Again" onclick="playAgain()">
+                </div>
+            </div>
+        </main>
+    </div>    
+</body>
+</html>

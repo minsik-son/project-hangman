@@ -1,0 +1,132 @@
+$hm-font: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+$hm-font-color:antiquewhite;
+$white-color:white;
+$hint-color:rgb(180, 0, 0);
+
+html{
+    font-family:$hm-font;
+    font-size:1em;
+}
+
+header{
+    margin:auto;
+}
+
+.background_img{
+    width: 40%;
+    height: 40%;
+}
+
+
+/*
+Main PAGE 
+*/
+#wrapper{
+    text-align: center;
+    background-color:$hm-font-color;
+    position: relative;
+
+    header{
+        margin:auto;
+        
+        .title{
+            color:rgb(23, 70, 54);
+            padding:30px 20px 30px 20px;
+            background-color: rgb(255, 254, 248);
+            border-radius: 50px;
+            display: inline-block;
+        }
+    }
+
+    main{
+        display: flex;
+        justify-content : center;
+        .hangman{
+            z-index: 1;
+            
+            .quiz_div{
+                background-color: rgb(255, 255, 230);
+                border-radius: 15px;
+                padding:40px;
+    
+                #answer{
+                    color:rgb(0, 94, 94);
+                    font-weight: bold;
+                    font-size: 2.1em;
+                    letter-spacing: 0.4em;
+                }
+    
+                #hint{
+                    font-size: 1.1em;
+                    font-weight: bold;
+                    color:$hint-color;
+                }
+    
+                .incorrect{
+                    border:3px solid $white-color;
+                    border-radius: 50px;
+                    background-color: $hint-color;
+                    color:$white-color;
+                    padding:5px;
+                    width:250px;
+                    margin: auto;
+                    display: block;
+                }
+    
+                .keyword{
+                    margin:30px;
+    
+                    .words{
+                        border:3px solid $white-color;
+                        border-radius: 10px;
+                        color:$white-color;
+                        background-color: #003347;
+                        width:40px;
+                        height:35px;
+                        font-weight: bold;
+                        font-size: 1.1em;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+/*
+Answer PAGE
+*/
+#win_page, #lose_page{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -300px;
+    margin-top: -250px;
+    max-width: 600px;
+    max-height: 700px;
+    border: 3px solid rgb(0, 94, 0);
+    opacity: 0;
+
+    .minipage_message{
+        position:absolute;
+        background-color: aliceblue;
+        border-radius: 30px;
+        width:300px;
+        top:250px;
+        left:130px;
+        padding:20px;
+        opacity: 0.9;
+    
+        .play_again{
+            color:$white-color;
+            background-color: #003347;
+            width:100px;
+            height:50px;
+            border-radius: 10px;
+            border: 3px solid $white-color;
+        }
+    }
+    
+}
+
+
